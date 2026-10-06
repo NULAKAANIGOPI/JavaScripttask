@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: linear-gradient(145deg, #ffffff, #e6e6e6);
+            border: none;
+            border-radius: 25px;
+            padding: 35px;
+            width: 400px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            box-sizing: border-box;
+        }
+
+        .label {
+            margin-bottom: 25px;
+        }
+
+        .label label {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .label input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #bbb;
+            border-radius: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .label input:focus {
+            border-color: #ff3b3b;
+            box-shadow: 0 0 8px rgba(255, 59, 59, 0.3);
+        }
+
+        #res {
+            background-color: #f1f1f1;
+            font-weight: bold;
+            color: #222;
+        }
+
+        #buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #ff4b4b, #d90000);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 12px 18px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        button:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+    </style>
+    <script>
+        function add() {
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+            var result = n1 + n2;
+            document.getElementById("res").value = result;
+        }
+
+        function sub() {
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+            var result = n1 - n2;
+            document.getElementById("res").value = result;
+        }
+
+        function mul() {
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+            var result = n1 * n2;
+            document.getElementById("res").value = result;
+        }
+
+        function div() {
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+            var result = n1 / n2;
+            document.getElementById("res").value = result;
+        }
+
+        function mod() {
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+            var result = n1 % n2;
+            document.getElementById("res").value = result;
+        }
+
+        function exp() {
+            var n1 = parseInt(document.getElementById("num1").value);
+            var n2 = parseInt(document.getElementById("num2").value);
+            var result = n1 ** n2;
+            document.getElementById("res").value = result;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <div class="label">
+                <label>Enter a value :</label>
+                <input type="text" placeholder="Enter Number only" id="num1" />
+            </div>
+
+            <div class="label">
+                <label>Enter a value :</label>
+                <input type="text" placeholder="Enter Number only" id="num2" />
+            </div>
+
+            <div class="label">
+                <label>Result :</label> 
+                <input type="text" id="res" readonly />
+            </div>
+            <div id="buttons">
+                <button type="button" onclick="add()">Addition</button>
+                <button type="button" onclick="sub()">Subtract</button>
+                <button type="button" onclick="mul()">Multiply</button>
+                <button type="button" onclick="div()">Division</button>
+                <button type="button" onclick="mod()">Modulus</button>
+                <button type="button" onclick="exp()">Exponential</button>
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
