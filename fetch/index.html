@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shopping Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: rgb(30, 46, 62);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        header h1 {
+            margin-bottom: 8px;
+        }
+        header p {
+            font-size: 13px;
+        }
+        .main {
+            text-align: center;
+            padding: 25px;
+        }
+        .main h2 {
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        #showBtn {
+            background-color: gold;
+            color: black;
+            padding: 12px 30px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+            text-align: center;
+        }
+         #showBtn:hover {
+            background-color: orange;
+         }
+        .product-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1000vh;
+            padding: 3%;
+            margin: auto;
+        }
+        .product-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+        .product-card h3 {
+            font-size: 16px;
+            height: 40px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .product-card .category {
+            color: gray;
+            font-size: 12px;
+        }
+        .buy-btn {
+            background-color: orange;
+            border: none;
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .buy-btn:hover {
+            background-color: #e69500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Shopping Store</h1>
+        <p>Explore Our Latest Products</p>
+    </header>
+
+    <div class="main">
+        <h2>All Products</h2>
+        <button onclick="fetchcallback()" id="showBtn"> Show Product </button>
+    </div>
+
+    <p id="status"></p>
+    <div id="output" class="product-container"></div>
+
+    <script type="text/javaScript" src="fetch.js"></script>
+</body>
+
+</html>
